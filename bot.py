@@ -38,17 +38,13 @@ from mistralai.client import Mistral
 # 🔑 API KEYLAR
 # =========================================================
 
-TELEGRAM_TOKEN = "..."
+import os
 
-GEMINI_API_KEY = "..."
-
-LOG_BOT_TOKEN = "..."
-
-MISTRAL_API_KEY = "..."
-
-# 👇 BU YERGA O'Z TELEGRAM ID'ingNI YOZ
-ADMIN_ID = ...
-
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+LOG_BOT_TOKEN = os.getenv("LOG_BOT_TOKEN")
+MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
+ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
 
 # =========================================================
 # 📁 PAPKA
